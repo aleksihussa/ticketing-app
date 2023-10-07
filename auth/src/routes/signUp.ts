@@ -1,6 +1,6 @@
 import express from "express";
 import * as z from "zod";
-import { validateRequestBodyMiddleware } from "../utils/validators";
+import { validateRequestBodyMiddleware } from "../middlewares/validators";
 import { baseUserSchema } from "../utils/schemas";
 
 const router = express.Router();

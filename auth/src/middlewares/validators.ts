@@ -12,7 +12,8 @@ export const validateRequestBodyMiddleware = (
     } catch (err) {
       // Customize the error message as needed
       const errorMessage = "Invalid request body: " + err;
-      return res.status(400).send(errorMessage);
+      const error = new Error(errorMessage);
+      await next(error);
     }
   };
 };
