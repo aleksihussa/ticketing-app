@@ -18,6 +18,7 @@ router.post(
     }
 
     const newUser = UserModel.build({ email, password });
+
     await newUser.save();
 
     const jwtToken = jwt.sign(
